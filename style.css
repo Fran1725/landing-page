@@ -1,13 +1,15 @@
 body {
   font-family: Roboto, Arial;
   margin: 0;
+  z-index: 200;
+  height: 2000px;
 }
 
-/* Header */
+/* Header starts here */
 
 header {
   display: flex;
-  height: 100px;
+  height: 120px;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,16 +18,19 @@ header {
 
 #header-background {
   width: 100%;
-  height: 100px;
+  height: 120px;
   background: url(https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: 300;
+  opacity: 1;
 }
 
 .logo-container {
   width: 600px;
   margin-right: 12px;
   margin-left: 125px;
+  margin-top: 8px;
 }
 
 header img {
@@ -36,17 +41,19 @@ header img {
   border-radius: 40px;
   border-width: 2px;
   border-color:white;  
-  z-index: 100;
+  z-index: 400;
 }
 
 nav {
   display: flex;
   align-items: center;
-  align-content: end;
+  width: 400px;
+  align-content: flex-end;
   justify-content: space-between;
   color: white;
   font-size: 24px;
   flex-shrink: 0;
+  margin-left: 30px;
 }
 
 nav div {
@@ -57,16 +64,105 @@ nav div {
 
 nav p {
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s, color 0.15;
 }
 
 nav p:hover {
-  opacity: 0.7;
+  opacity: 0.5;
+  color: lightcoral;
 }
 
-/* the content starts here */
+/* main content */
 
+main {
+  position: relative;
+  margin-top: 120px;
+}
 
+/* section 2 starts here */
 
+.section-1 {
+  display: flex;
+  position: absolute;
+  background-color: #1F2937;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-left: 50px;
+}
+
+.main-text {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 0;
+  margin-top: 2px;
+  padding-right: 10px;
+  padding-left: 70px;
+  font-weight: 700;
+  padding-bottom: 0;
+}
+
+.secondary-text-container {
+  flex: 1;
+  margin-top: 6px;
+}
+
+.secondary-text-container p {
+  font-size: 18px;
+  color: white;
+  margin-top: 2px;
+  padding-right: 30px;
+  padding-left: 70px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  width: 506px;
+  height: 400px;
+  flex: 1;
+  padding-right: 120px;
+}
+
+.section-1 img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border-style: solid;
+  border-color:blue;
+}
+
+button {
+  background-color: #3882F6;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  width: 100px;
+  margin-left: 68px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background-color:#3163b3;
+}
+
+/* section 2 starts here */
+
+.section-2 {
+  display: flex;
+  position: absolute;
+  margin-top: 400px;
+  height: 400px;
+}
 
 
