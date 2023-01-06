@@ -2,7 +2,6 @@ body {
   font-family: Roboto, Arial;
   margin: 0;
   z-index: 200;
-  height: 2000px;
 }
 
 /* Header starts here */
@@ -11,6 +10,7 @@ header {
   display: flex;
   height: 120px;
   position: fixed;
+  justify-content: space-between;
   top: 0;
   left: 0;
   right: 0;
@@ -26,9 +26,10 @@ header {
 }
 
 .logo-container {
-  width: 600px;
+  width: 100px;
   margin-right: 12px;
   margin-left: 125px;
+
   margin-top: 8px;
 }
 
@@ -44,53 +45,45 @@ header img {
 }
 
 nav {
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  width: 400px;
-  align-content: flex-end;
-  justify-content: space-between;
   color: white;
   font-size: 24px;
-  flex-shrink: 0;
-  margin-left: 30px;
+  margin-right: 125px;
 }
 
 nav div {
   padding-left: 20px;
   padding-right: 20px;
-  flex: 1;
+  width: 100px;
 }
 
 nav p {
   cursor: pointer;
-  transition: opacity 0.15s, color 0.15;
+  transition: opacity 0.15s, color 0.15; font-size: 0.15s;
 }
 
 nav p:hover {
   opacity: 0.5;
   color: lightcoral;
+  font-size: 26px;
 }
 
-/* Main content */
-
-main {
-  position: relative;
-  margin-top: 120px;
-  height: 800px;
-}
 
 /* Section 1 starts here */
 
 .section-1 {
   display: flex;
-  position: absolute;
+  margin-top: 120px;
   background-color: #1F2937;
   height: 400px;
   justify-content: center;
   align-items: center;
 }
 
-.container {
+.info-container {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -159,8 +152,6 @@ button:hover {
 /* Section 2 starts here */
 
 .section-2 {
-  position: absolute;
-  margin-top: 400px;
   width: 100%;
   height: 400px;
   background-color: rgb(234, 225, 225);
@@ -168,6 +159,8 @@ button:hover {
 
 .title-section-2 {
   text-align: center;
+  margin-top: 0;
+  padding-top: 28px;
   color: #1F2937;
   font-size: 28px;
   font-weight: 700;
@@ -176,41 +169,125 @@ button:hover {
 .container-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  vertical-align: center;
   margin-left: 150px;
   margin-right: 150px;
-  margin-top: 50px;
+  margin-top: 60px;
   column-gap: 35px;
 }
 
-.container-grid-image {
-  padding-left: 28px;
-}
 .container-grid img {
-  width: 160px;
-  height: 160px;
-  border-style: solid;
-  border-color: blue;
+  width: 97%;
+  border: 4px solid blue;
   border-radius: 14px;
   cursor: pointer;
-
+  transition: opacity 0.15s;
 }
 
-@media (max-width: 750px) {
-  .container-grid {
-  grid-template-columns: 1fr 1fr;
-  align-items: flex;
-  }
+.container-grid img:hover {
+  opacity: 0.7;
 }
-
-@media (max-width: 900px) {
-  .container-grid {
-  grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 
 .container-grid p {
-  padding-left: 28px;
-  padding-right: 28px;
   text-align: center;
+  color: rgb(68, 66, 66);
+}
+
+/* Section 3 starts here */
+.section-3 {
+  height: 300px;
+  background-color: #ccbbd0;
+  display: flex;
+  align-items: center;
+  justify-content: justify;
+}
+
+.section-3 div{
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.quote {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: justify;
+  font-size: 36px;
+  font-style:italic;
+  color: #1F2937;
+}
+
+.author {
+  font-weight: 500;
+  text-align:end;
+}
+
+/* Section 4 starts here */
+.section-4 {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(234, 225, 225);
+}
+
+.action-card {
+  background-color:#3882F6;
+  display: flex;
+  border-radius: 8px;
+  align-items: center;
+  width: 800px;
+  height: 120px; 
+}
+
+.action-text-container {
+color: white;
+flex: 1;
+}
+
+.action-text-container d {
+  flex: 1;
+}
+
+.action-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-left: 100px;
+}
+.action-text {
+  font-size: 14px;
+  padding-left: 100px;
+}
+
+.action-button {
+  background-color: #3882F6;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid white;
+  margin-right: 80px;
+  width: 110px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.15s color 0.15s;
+}
+
+.action-button:hover {
+  background-color: white;
+  color: #3882F6;
+}
+/* Footer starts here */
+footer {
+  background-color: #1F2937;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+footer p {
+  text-align: center;
+  flex: 1;
+  font-size: 14px;
+  color: white;
 }
